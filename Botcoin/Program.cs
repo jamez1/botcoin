@@ -49,6 +49,15 @@ namespace Botcoin
 
         }
 
+        static void Intro()
+        {
+            Console.WriteLine(
+@"
+-----WELCOME TO BOTCOIN----
+Automated BTC Trading platform
+");
+        }
+
         static void Main(string[] args)
         {
             _container = new UnityContainer();
@@ -58,6 +67,7 @@ namespace Botcoin
 
             _container.RegisterType<ITradeStrategy, Arbitrarge1TradeStrategy>();
 
+            Intro();
             Run();
         }
     }

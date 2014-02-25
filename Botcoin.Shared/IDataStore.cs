@@ -8,5 +8,6 @@ namespace Botcoin.Shared
 {
     public interface IDataStore
     {
+        void Save(TickDataModel data);
     }
 }

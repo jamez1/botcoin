@@ -20,6 +20,9 @@ namespace Botcoin.Strategy.Arbitrarge1
             //TODO: Implement real algorithm
             if (quote1.Bid > quote2.Ask)
                 Console.WriteLine("Arb detected");
+
+            if (quote2.Bid > quote1.Ask)
+                Console.WriteLine("Arb detected");
         }
 
         public void Execute()

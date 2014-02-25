@@ -12,5 +12,11 @@ namespace Botcoin.DataStore
         public DBDataStore()
         {
         }
+
+
+        public void Save(TickDataModel data)
+        {
+            Console.WriteLine("Bid: {1}, Ask: {0}",data.Ask,data.Bid);
+        }
     }
 }

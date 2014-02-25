@@ -44,6 +44,7 @@ namespace Botcoin.Adapters.MtGox
             tick.Bid        = Sanitize(sourceTicker.Bid     );
             tick.Ask = Sanitize(sourceTicker.Ask);
 
+            dataStore.Save(tick);
             lastQuote = tick;
 
             Thread.Sleep(1000);
