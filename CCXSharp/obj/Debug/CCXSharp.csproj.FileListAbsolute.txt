@@ -1,0 +1,12 @@
+C:\Users\Iceman\Downloads\cryptocoinxchange\bin\Debug\CCXSharp\CCXSharp.dll.config
+C:\Users\Iceman\Downloads\cryptocoinxchange\bin\Debug\CCXSharp\CCXSharp.dll
+C:\Users\Iceman\Downloads\cryptocoinxchange\bin\Debug\CCXSharp\CCXSharp.pdb
+C:\Users\Iceman\Downloads\cryptocoinxchange\CCXSharp\obj\Debug\CCXSharp.csprojResolveAssemblyReference.cache
+C:\Users\Iceman\Downloads\cryptocoinxchange\CCXSharp\obj\Debug\CCXSharp.dll
+C:\Users\Iceman\Downloads\cryptocoinxchange\CCXSharp\obj\Debug\CCXSharp.pdb
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\bin\Debug\CCXSharp\CCXSharp.dll.config
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\bin\Debug\CCXSharp\CCXSharp.dll
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\bin\Debug\CCXSharp\CCXSharp.pdb
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\CCXSharp\obj\Debug\CCXSharp.csprojResolveAssemblyReference.cache
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\CCXSharp\obj\Debug\CCXSharp.dll
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\CCXSharp\obj\Debug\CCXSharp.pdb

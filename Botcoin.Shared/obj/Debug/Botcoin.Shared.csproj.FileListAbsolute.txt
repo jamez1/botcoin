@@ -1,0 +1,4 @@
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.Shared\bin\Debug\Botcoin.Shared.dll
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.Shared\bin\Debug\Botcoin.Shared.pdb
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.Shared\obj\Debug\Botcoin.Shared.dll
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.Shared\obj\Debug\Botcoin.Shared.pdb

@@ -1,0 +1,7 @@
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.DataStore\obj\Debug\Botcoin.DataStore.csprojResolveAssemblyReference.cache
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.DataStore\bin\Debug\Botcoin.DataStore.dll
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.DataStore\bin\Debug\Botcoin.DataStore.pdb
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.DataStore\bin\Debug\Botcoin.Shared.dll
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.DataStore\bin\Debug\Botcoin.Shared.pdb
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.DataStore\obj\Debug\Botcoin.DataStore.dll
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.DataStore\obj\Debug\Botcoin.DataStore.pdb

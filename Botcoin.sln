@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin", "Botcoin\Botcoin.csproj", "{57C04955-30E8-4A91-8544-F1659E8320B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin.Adapters.MtGox", "Botcoin.Adapters.MtGox\Botcoin.Adapters.MtGox.csproj", "{58A1EFAD-D817-40F4-A19D-2A668827A856}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin.Shared", "Botcoin.Shared\Botcoin.Shared.csproj", "{AA9B5FF9-C340-4D6B-BE0A-B461BA6FCC57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin.Strategy.Arbitrarge1", "Botcoin.Strategy.Arbitrarge1\Botcoin.Strategy.Arbitrarge1.csproj", "{C2A75FD7-978A-4A89-87F3-8430DAC07C19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin.DataStore", "Botcoin.DataStore\Botcoin.DataStore.csproj", "{27774B90-80AD-4AF8-AC55-9278280F0DC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCXSharp", "CCXSharp\CCXSharp.csproj", "{48AF038D-27AF-454B-B181-91C2A1940ED6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3347A537-E8CF-448E-B463-A0C79796F0A3}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57C04955-30E8-4A91-8544-F1659E8320B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57C04955-30E8-4A91-8544-F1659E8320B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57C04955-30E8-4A91-8544-F1659E8320B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57C04955-30E8-4A91-8544-F1659E8320B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58A1EFAD-D817-40F4-A19D-2A668827A856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A1EFAD-D817-40F4-A19D-2A668827A856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A1EFAD-D817-40F4-A19D-2A668827A856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A1EFAD-D817-40F4-A19D-2A668827A856}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA9B5FF9-C340-4D6B-BE0A-B461BA6FCC57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA9B5FF9-C340-4D6B-BE0A-B461BA6FCC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA9B5FF9-C340-4D6B-BE0A-B461BA6FCC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA9B5FF9-C340-4D6B-BE0A-B461BA6FCC57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2A75FD7-978A-4A89-87F3-8430DAC07C19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2A75FD7-978A-4A89-87F3-8430DAC07C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2A75FD7-978A-4A89-87F3-8430DAC07C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2A75FD7-978A-4A89-87F3-8430DAC07C19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27774B90-80AD-4AF8-AC55-9278280F0DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27774B90-80AD-4AF8-AC55-9278280F0DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27774B90-80AD-4AF8-AC55-9278280F0DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27774B90-80AD-4AF8-AC55-9278280F0DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48AF038D-27AF-454B-B181-91C2A1940ED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48AF038D-27AF-454B-B181-91C2A1940ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48AF038D-27AF-454B-B181-91C2A1940ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48AF038D-27AF-454B-B181-91C2A1940ED6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

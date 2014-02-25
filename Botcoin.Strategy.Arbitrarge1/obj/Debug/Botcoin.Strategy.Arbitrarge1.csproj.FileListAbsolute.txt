@@ -1,0 +1,7 @@
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.Strategy.Arbitrarge1\obj\Debug\Botcoin.Strategy.Arbitrarge1.csprojResolveAssemblyReference.cache
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.Strategy.Arbitrarge1\bin\Debug\Botcoin.Strategy.Arbitrarge1.dll
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.Strategy.Arbitrarge1\bin\Debug\Botcoin.Strategy.Arbitrarge1.pdb
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.Strategy.Arbitrarge1\bin\Debug\Botcoin.Shared.dll
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.Strategy.Arbitrarge1\bin\Debug\Botcoin.Shared.pdb
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.Strategy.Arbitrarge1\obj\Debug\Botcoin.Strategy.Arbitrarge1.dll
+c:\Users\Iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin.Strategy.Arbitrarge1\obj\Debug\Botcoin.Strategy.Arbitrarge1.pdb
