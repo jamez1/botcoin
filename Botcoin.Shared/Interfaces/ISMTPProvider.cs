@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Botcoin
+namespace Botcoin.Shared.Interfaces
 {
-    public interface IConfigurationManager
+    public interface ISMTPProvider
     {
+        bool Send(string subject, string body);
     }
 }

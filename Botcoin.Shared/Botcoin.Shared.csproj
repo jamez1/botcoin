@@ -39,14 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IConfigurationManager.cs" />
-    <Compile Include="IDataStore.cs" />
-    <Compile Include="IExchange.cs" />
-    <Compile Include="IFailSafeDetector.cs" />
-    <Compile Include="INotificationEngine.cs" />
-    <Compile Include="ITradeStrategy.cs" />
+    <Compile Include="Helpers\SMTPProvider.cs" />
+    <Compile Include="Interfaces\IConfigurationManager.cs" />
+    <Compile Include="Interfaces\IDataStore.cs" />
+    <Compile Include="Interfaces\IExchange.cs" />
+    <Compile Include="Interfaces\IFailSafeDetector.cs" />
+    <Compile Include="Interfaces\INotificationEngine.cs" />
+    <Compile Include="Interfaces\ISMTPProvider.cs" />
+    <Compile Include="Interfaces\ITradeStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TickDataModel.cs" />
+    <Compile Include="Interfaces\TickDataModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

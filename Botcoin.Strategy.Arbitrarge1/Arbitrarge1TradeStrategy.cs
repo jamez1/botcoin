@@ -10,9 +10,12 @@ namespace Botcoin.Strategy.Arbitrarge1
     public class Arbitrarge1TradeStrategy: ITradeStrategy
     {
         readonly IExchange[] exchanges;
-        public Arbitrarge1TradeStrategy(IExchange[] _exchanges)
+        readonly INotificationEngine notificationEngine;
+
+        public Arbitrarge1TradeStrategy(IExchange[] _exchanges, INotificationEngine _notificationEngine)
         {
             exchanges = _exchanges;
+            notificationEngine = _notificationEngine;
         }
 
         private void Compare(TickDataModel quote1, TickDataModel quote2)
@@ -20,10 +23,15 @@ namespace Botcoin.Strategy.Arbitrarge1
             //This algorithm will do
 
             if (quote1.Bid > quote2.Ask)
+            {
                 Console.WriteLine("Arb detected, buy {1} sell {0}", quote1.SourceExchange, quote2.SourceExchange);
-
+                notificationEngine.TradeSignal(quote1, quote2);
+            }
             else if (quote2.Bid > quote1.Ask)
+            {
                 Console.WriteLine("Arb detected, buy {1} sell {0}", quote2.SourceExchange, quote1.SourceExchange);
+                notificationEngine.TradeSignal(quote1, quote2);
+            }
         }
 
         public void Execute()

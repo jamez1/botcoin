@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin", "Botcoin\Botcoin.csproj", "{57C04955-30E8-4A91-8544-F1659E8320B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin.Executable.CommandLine", "Botcoin\Botcoin.Executable.CommandLine.csproj", "{57C04955-30E8-4A91-8544-F1659E8320B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin.Adapters.MtGox", "Botcoin.Adapters.MtGox\Botcoin.Adapters.MtGox.csproj", "{58A1EFAD-D817-40F4-A19D-2A668827A856}"
 EndProject

@@ -11,6 +11,8 @@ using Botcoin.Strategy.Arbitrarge1;
 using System.Threading;
 using Botcoin.Adapters.Bitstamp;
 using Botcoin.Adapters.BTCMarkets;
+using Botcoin.Shared.Interfaces;
+using Botcoin.Shared.Helpers;
 
 namespace Botcoin
 {
@@ -70,6 +72,13 @@ Automated BTC Trading platform
             _container.RegisterType<IDataStore, DBDataStore>( new ContainerControlledLifetimeManager());
 
             _container.RegisterType<ITradeStrategy, Arbitrarge1TradeStrategy>(new ContainerControlledLifetimeManager());
+
+            _container.RegisterType<ISMTPProvider, SMTPProvider>(new ContainerControlledLifetimeManager());
+
+            //_container.RegisterType<INotificationEngine, NotificationEngine>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<INotificationEngine, NullNotificationEngine>(new ContainerControlledLifetimeManager());
+
+            _container.RegisterType<IConfigurationManager, ConfigurationManager>(new ContainerControlledLifetimeManager());
 
             Intro();
             Run();

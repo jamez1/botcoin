@@ -17,6 +17,10 @@ namespace Botcoin.Adapters.Bitstamp
         private string getUrl = "https://www.bitstamp.net/api/ticker/";
         private string sourceExchange = "BitStamp";
 
+        public string friendlyName()
+        {
+                return sourceExchange;
+        }
         public BitStampExchange(IDataStore _dataStore)
         {
             dataStore = _dataStore;

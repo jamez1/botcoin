@@ -18,6 +18,10 @@ namespace Botcoin.Adapters.MtGox
         private TickDataModel lastQuote;
         private string sourceExchange = "MtGox";
 
+        public string friendlyName()
+        {
+            return sourceExchange;
+        }
         public MtGoxExchange(IDataStore _dataStore)
         {
             mtGoxExchangeAPI = new CCXSharp.MtGox.MtGoxExchange();

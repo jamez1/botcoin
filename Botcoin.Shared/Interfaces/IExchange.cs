@@ -11,5 +11,6 @@ namespace Botcoin
     {
         void UpdateQuotes();
         TickDataModel GetLastQuote();
+        string friendlyName();
     }
 }

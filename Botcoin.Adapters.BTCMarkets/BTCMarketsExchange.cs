@@ -17,6 +17,11 @@ namespace Botcoin.Adapters.BTCMarkets
         private string getUrl = "https://api.btcmarkets.net/market/BTC/AUD/tick";
         private string sourceExchange = "BTCMarkets";
 
+        public string friendlyName()
+        {
+            return sourceExchange;
+        }
+
         public BTCMarketsExchange(IDataStore _dataStore)
         {
             dataStore = _dataStore;
