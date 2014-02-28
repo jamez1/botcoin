@@ -67,7 +67,7 @@ Automated BTC Trading platform
         static void Main(string[] args)
         {
             _container = new UnityContainer();
-
+            
             _container.RegisterType<IExchange, MtGoxExchange>("MtGoxExchange", new ContainerControlledLifetimeManager(), new InjectionMember[]{});
             _container.RegisterType<IExchange, BitStampExchange>("BitStampExchange", new ContainerControlledLifetimeManager(), new InjectionMember[] { });
             _container.RegisterType<IExchange, BTCMarketsExchange>("BTCMarketsExchange", new ContainerControlledLifetimeManager(), new InjectionMember[] { });
