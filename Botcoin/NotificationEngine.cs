@@ -28,16 +28,18 @@ namespace Botcoin
 Botcoin has discovered an <i>arbitrarge</i> oppurtunity by buying <b>{0}</b> and selling <b>{1}</b>!<br>
 <br>
 Current order book for {0}:<br>
-Bid: <b>${2}</b> Ask: <b>${3}</b><br>
+<u>Bid: <b>${2}</b></u> Ask: <b>${3}</b><br>
 <br>
 Current order book for {1}:<br>
-Bid: <b>${4}</b> Ask: <b>${5}</b><br>
-
+Bid: <b>${4}</b> <u>Ask: <b>${5}</b></u><br>
+<br>
+You stand to make a profit of: ${6}<br>
 
 "
 , buyQuote.SourceExchange, sellQuote.SourceExchange,
 buyQuote.Bid, buyQuote.Ask,
-sellQuote.Bid, sellQuote.Ask
+sellQuote.Bid, sellQuote.Ask,
+sellQuote.Ask - buyQuote.Bid
 );
 
             smtpProvider.Send(subject, body);
