@@ -35,3 +35,5 @@ C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin\bin\Debug\
 C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin\bin\Debug\SocketIOClient.pdb
 C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin\bin\Debug\SocketIOClient.xml
 C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin\bin\Debug\WebSocket4Net.pdb
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin\bin\Debug\Botcoin.Adapters.BTCe.dll
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin\bin\Debug\Botcoin.Adapters.BTCe.pdb

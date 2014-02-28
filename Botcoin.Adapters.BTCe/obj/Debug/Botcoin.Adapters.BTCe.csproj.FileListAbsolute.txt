@@ -1,0 +1,9 @@
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.BTCe\bin\Debug\Botcoin.Adapters.BTCe.dll
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.BTCe\bin\Debug\Botcoin.Adapters.BTCe.pdb
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.BTCe\bin\Debug\Botcoin.Shared.dll
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.BTCe\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.BTCe\bin\Debug\Botcoin.Shared.pdb
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.BTCe\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.BTCe\obj\Debug\Botcoin.Adapters.BTCe.csprojResolveAssemblyReference.cache
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.BTCe\obj\Debug\Botcoin.Adapters.BTCe.dll
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.BTCe\obj\Debug\Botcoin.Adapters.BTCe.pdb

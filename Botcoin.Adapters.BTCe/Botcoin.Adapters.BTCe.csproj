@@ -4,18 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{57C04955-30E8-4A91-8544-F1659E8320B5}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{D57BF73C-DA9B-47D8-88FF-A91B26D164FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Botcoin</RootNamespace>
-    <AssemblyName>Botcoin</AssemblyName>
+    <RootNamespace>Botcoin.Adapters.BTCe</RootNamespace>
+    <AssemblyName>Botcoin.Adapters.BTCe</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,7 +24,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,12 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Practices.Unity, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Unity.Configuration">
-      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,44 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfigurationManager.cs" />
-    <Compile Include="NotificationEngine.cs" />
-    <Compile Include="NullNotificationEngine.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="BTCeExchange.cs" />
+    <Compile Include="BTCeExchangeTickerModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Botcoin.Adapters.Bitstamp\Botcoin.Adapters.Bitstamp.csproj">
-      <Project>{e8d80289-b646-421f-be3c-4ae19019dc19}</Project>
-      <Name>Botcoin.Adapters.Bitstamp</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Botcoin.Adapters.BTCe\Botcoin.Adapters.BTCe.csproj">
-      <Project>{d57bf73c-da9b-47d8-88ff-a91b26d164ff}</Project>
-      <Name>Botcoin.Adapters.BTCe</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Botcoin.Adapters.BTCMarkets\Botcoin.Adapters.BTCMarkets.csproj">
-      <Project>{2e16eb5d-ce2d-4c4a-9aff-784b095a3e03}</Project>
-      <Name>Botcoin.Adapters.BTCMarkets</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Botcoin.Adapters.MtGox\Botcoin.Adapters.MtGox.csproj">
-      <Project>{58a1efad-d817-40f4-a19d-2a668827a856}</Project>
-      <Name>Botcoin.Adapters.MtGox</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Botcoin.DataStore\Botcoin.DataStore.csproj">
-      <Project>{27774b90-80ad-4af8-ac55-9278280f0dc3}</Project>
-      <Name>Botcoin.DataStore</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Botcoin.Shared\Botcoin.Shared.csproj">
       <Project>{aa9b5ff9-c340-4d6b-be0a-b461ba6fcc57}</Project>
       <Name>Botcoin.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Botcoin.Strategy.Arbitrarge1\Botcoin.Strategy.Arbitrarge1.csproj">
-      <Project>{c2a75fd7-978a-4a89-87f3-8430dac07c19}</Project>
-      <Name>Botcoin.Strategy.Arbitrarge1</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
