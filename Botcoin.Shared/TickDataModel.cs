@@ -8,6 +8,7 @@ namespace Botcoin.Shared
 {
     public class TickDataModel
     {
+        public string SourceExchange { get; set; }
         public decimal High { get; set; }
         public decimal Low { get; set; }
         public decimal Average { get; set; }

@@ -9,6 +9,7 @@ using Botcoin.DataStore;
 using Microsoft.Practices.Unity;
 using Botcoin.Strategy.Arbitrarge1;
 using System.Threading;
+using Botcoin.Adapters.Bitstamp;
 
 namespace Botcoin
 {
@@ -62,10 +63,11 @@ Automated BTC Trading platform
         {
             _container = new UnityContainer();
 
-            _container.RegisterType<IExchange, MtGoxExchange>("MtGoxExchange");
-            _container.RegisterType<IDataStore, DBDataStore>();
+            _container.RegisterType<IExchange, MtGoxExchange>("MtGoxExchange", new ContainerControlledLifetimeManager(), new InjectionMember[]{});
+            _container.RegisterType<IExchange, BitStampExchange>("BitStampExchange", new ContainerControlledLifetimeManager(), new InjectionMember[] { });
+            _container.RegisterType<IDataStore, DBDataStore>( new ContainerControlledLifetimeManager());
 
-            _container.RegisterType<ITradeStrategy, Arbitrarge1TradeStrategy>();
+            _container.RegisterType<ITradeStrategy, Arbitrarge1TradeStrategy>(new ContainerControlledLifetimeManager());
 
             Intro();
             Run();

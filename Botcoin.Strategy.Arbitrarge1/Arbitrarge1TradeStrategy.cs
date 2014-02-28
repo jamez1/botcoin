@@ -17,26 +17,30 @@ namespace Botcoin.Strategy.Arbitrarge1
 
         private void Compare(TickDataModel quote1, TickDataModel quote2)
         {
-            //TODO: Implement real algorithm
-            if (quote1.Bid > quote2.Ask)
-                Console.WriteLine("Arb detected");
+            //This algorithm will do
 
-            if (quote2.Bid > quote1.Ask)
-                Console.WriteLine("Arb detected");
+            if (quote1.Bid > quote2.Ask)
+                Console.WriteLine("Arb detected, buy {1} sell {0}", quote1.SourceExchange, quote2.SourceExchange);
+
+            else if (quote2.Bid > quote1.Ask)
+                Console.WriteLine("Arb detected, buy {1} sell {0}", quote2.SourceExchange, quote1.SourceExchange);
         }
 
         public void Execute()
         {
-            //TODO: Be bothered to write the proper loop, this is so terrible it's not funny
-            //As a bonus as I've only implemented one exchange it actually compares that exchange against itself
-            //so I can test haha!
+            //Clever loop to compare each exchange against eachother once
 
-            foreach (var exchange1 in exchanges)
+            int exchangeCount = exchanges.Count();
+
+            for (int i = 0; i < exchangeCount; i++)
             {
-                foreach (var exchange2 in exchanges)
+                for (int j = i + 1; j < exchangeCount; j++)
                 {
-                    var quote1 = exchange1.GetLastQuote();
-                    var quote2 = exchange2.GetLastQuote();
+                    var quote1 = exchanges[i].GetLastQuote();
+                    var quote2 = exchanges[j].GetLastQuote();
+
+                    if (quote1 != null && quote2 !=null)
+                        Compare(quote1, quote2);
                 }
             }
         }

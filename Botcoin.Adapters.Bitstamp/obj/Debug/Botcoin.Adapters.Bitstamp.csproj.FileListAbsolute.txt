@@ -1,0 +1,9 @@
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.Bitstamp\bin\Debug\Botcoin.Adapters.Bitstamp.dll
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.Bitstamp\bin\Debug\Botcoin.Adapters.Bitstamp.pdb
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.Bitstamp\bin\Debug\Botcoin.Shared.dll
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.Bitstamp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.Bitstamp\bin\Debug\Botcoin.Shared.pdb
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.Bitstamp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.Bitstamp\obj\Debug\Botcoin.Adapters.Bitstamp.csprojResolveAssemblyReference.cache
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.Bitstamp\obj\Debug\Botcoin.Adapters.Bitstamp.dll
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin.Adapters.Bitstamp\obj\Debug\Botcoin.Adapters.Bitstamp.pdb

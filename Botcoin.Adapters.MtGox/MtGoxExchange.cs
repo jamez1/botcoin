@@ -14,12 +14,13 @@ namespace Botcoin.Adapters.MtGox
     public class MtGoxExchange : IExchange
     {
         readonly IDataStore dataStore;
-        readonly IMtGoxExchange mtGoxExchange;
+        readonly IMtGoxExchange mtGoxExchangeAPI;
         private TickDataModel lastQuote;
+        private string sourceExchange = "MtGox";
 
         public MtGoxExchange(IDataStore _dataStore)
         {
-            mtGoxExchange = new CCXSharp.MtGox.MtGoxExchange();
+            mtGoxExchangeAPI = new CCXSharp.MtGox.MtGoxExchange();
             dataStore = _dataStore;
         }
 
@@ -32,10 +33,11 @@ namespace Botcoin.Adapters.MtGox
 
         public void UpdateQuotes()
         {
-            Ticker sourceTicker = mtGoxExchange.GetTicker(Currency.USD);
+            Ticker sourceTicker = mtGoxExchangeAPI.GetTicker(Currency.USD);
 
             var tick = new TickDataModel();
 
+            tick.SourceExchange = sourceExchange;
             tick.High       = Sanitize(sourceTicker.High    );
             tick.Low        = Sanitize(sourceTicker.Low     );
             tick.Average    = Sanitize(sourceTicker.Average );

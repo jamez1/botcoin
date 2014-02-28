@@ -59,6 +59,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Botcoin.Adapters.Bitstamp\Botcoin.Adapters.Bitstamp.csproj">
+      <Project>{e8d80289-b646-421f-be3c-4ae19019dc19}</Project>
+      <Name>Botcoin.Adapters.Bitstamp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Botcoin.Adapters.MtGox\Botcoin.Adapters.MtGox.csproj">
       <Project>{58a1efad-d817-40f4-a19d-2a668827a856}</Project>
       <Name>Botcoin.Adapters.MtGox</Name>

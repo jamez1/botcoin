@@ -31,3 +31,5 @@ c:\users\iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin\bin\Debug\
 c:\users\iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin\bin\Debug\SocketIOClient.pdb
 c:\users\iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin\bin\Debug\SocketIOClient.xml
 c:\users\iceman\documents\visual studio 2012\Projects\Botcoin\Botcoin\bin\Debug\WebSocket4Net.pdb
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin\bin\Debug\Botcoin.Adapters.Bitstamp.dll
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin\bin\Debug\Botcoin.Adapters.Bitstamp.pdb
