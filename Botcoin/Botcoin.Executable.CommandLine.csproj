@@ -73,6 +73,10 @@
       <Project>{2e16eb5d-ce2d-4c4a-9aff-784b095a3e03}</Project>
       <Name>Botcoin.Adapters.BTCMarkets</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Botcoin.Adapters.CampBXExchange\Botcoin.Adapters.CampBXExchange.csproj">
+      <Project>{64c55168-e104-4ab6-8e60-aa1f1aaa0a2a}</Project>
+      <Name>Botcoin.Adapters.CampBXExchange</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Botcoin.Adapters.MtGox\Botcoin.Adapters.MtGox.csproj">
       <Project>{58a1efad-d817-40f4-a19d-2a668827a856}</Project>
       <Name>Botcoin.Adapters.MtGox</Name>

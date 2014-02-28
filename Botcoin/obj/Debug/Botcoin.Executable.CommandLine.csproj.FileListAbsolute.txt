@@ -37,3 +37,5 @@ C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin\bin\Debug\
 C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin\bin\Debug\WebSocket4Net.pdb
 C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin\bin\Debug\Botcoin.Adapters.BTCe.dll
 C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin\bin\Debug\Botcoin.Adapters.BTCe.pdb
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin\bin\Debug\Botcoin.Adapters.CampBXExchange.dll
+C:\Users\Iceman\Documents\Visual Studio 2012\Projects\Botcoin\Botcoin\bin\Debug\Botcoin.Adapters.CampBXExchange.pdb

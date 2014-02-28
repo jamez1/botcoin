@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin.Adapters.BTCMarkets
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin.Adapters.BTCe", "Botcoin.Adapters.BTCe\Botcoin.Adapters.BTCe.csproj", "{D57BF73C-DA9B-47D8-88FF-A91B26D164FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin.Adapters.CampBXExchange", "Botcoin.Adapters.CampBXExchange\Botcoin.Adapters.CampBXExchange.csproj", "{64C55168-E104-4AB6-8E60-AA1F1AAA0A2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{D57BF73C-DA9B-47D8-88FF-A91B26D164FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D57BF73C-DA9B-47D8-88FF-A91B26D164FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D57BF73C-DA9B-47D8-88FF-A91B26D164FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C55168-E104-4AB6-8E60-AA1F1AAA0A2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C55168-E104-4AB6-8E60-AA1F1AAA0A2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C55168-E104-4AB6-8E60-AA1F1AAA0A2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C55168-E104-4AB6-8E60-AA1F1AAA0A2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
