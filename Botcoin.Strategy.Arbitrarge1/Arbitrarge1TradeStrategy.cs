@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Botcoin.Shared;
+using Botcoin.Shared.Models;
 
 namespace Botcoin.Strategy.Arbitrarge1
 {
@@ -18,20 +19,38 @@ namespace Botcoin.Strategy.Arbitrarge1
             notificationEngine = _notificationEngine;
         }
 
-        private void Compare(TickDataModel quote1, TickDataModel quote2)
+        private bool Compare(IExchange exchange1, IExchange exchange2)
         {
-            //This algorithm will do
+            var quote1 = exchange1.GetLastQuote();
+            var quote2 = exchange2.GetLastQuote();
 
-            if (quote1.Bid > quote2.Ask)
-            {
-                Console.WriteLine("Arb detected, buy {1} sell {0}", quote1.SourceExchange, quote2.SourceExchange);
-                notificationEngine.TradeSignal(quote1, quote2);
-            }
-            else if (quote2.Bid > quote1.Ask)
-            {
-                Console.WriteLine("Arb detected, buy {1} sell {0}", quote2.SourceExchange, quote1.SourceExchange);
-                notificationEngine.TradeSignal(quote1, quote2);
-            }
+            if (quote1 == null || quote2 == null)
+                return false;
+
+            if (quote1.Bid <= quote2.Ask)
+                return false;
+
+            #region -- Prepare --
+
+            string desc = string.Format("Arb detected, buy {1} sell {0}", quote1.SourceExchange, quote2.SourceExchange);
+            Console.WriteLine(desc);
+
+            decimal qty = 1; //Determine this based on how much cash is left
+
+            #endregion 
+
+
+
+            #region -- Execution --
+
+            var trade = new Trade(desc);
+            trade.Transactions.Add(new MarketOrderBuyBTCTransaction(exchange1, qty, quote1.Bid));
+
+            notificationEngine.TradeSignal(quote1, quote2);
+
+            #endregion
+
+            return true;
         }
 
         public void Execute()
@@ -44,11 +63,14 @@ namespace Botcoin.Strategy.Arbitrarge1
             {
                 for (int j = i + 1; j < exchangeCount; j++)
                 {
-                    var quote1 = exchanges[i].GetLastQuote();
-                    var quote2 = exchanges[j].GetLastQuote();
 
-                    if (quote1 != null && quote2 !=null)
-                        Compare(quote1, quote2);
+                    //Try buy the first, sell the second
+                    var result = Compare(exchanges[i], exchanges[j]);
+
+                    //If that didn't work try buy the second sell the first
+                    if (!result)
+                        Compare(exchanges[j], exchanges[i]);
+                    
                 }
             }
         }

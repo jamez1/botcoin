@@ -47,6 +47,9 @@
     <Compile Include="Interfaces\INotificationEngine.cs" />
     <Compile Include="Interfaces\ISMTPProvider.cs" />
     <Compile Include="Interfaces\ITradeStrategy.cs" />
+    <Compile Include="Models\MarketOrderBuyBTCTransaction.cs" />
+    <Compile Include="Models\Trade.cs" />
+    <Compile Include="Models\Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Interfaces\TickDataModel.cs" />
   </ItemGroup>

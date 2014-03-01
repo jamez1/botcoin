@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Botcoin.Shared;
+using Botcoin.Shared.Models;
 
 namespace Botcoin
 {
@@ -21,7 +22,7 @@ namespace Botcoin
     public interface INotificationEngine
     {
         void TradeSignal(TickDataModel buyQuote, TickDataModel sellQuote);
-
+        void TradeSignal(Trade trade);
 
     }
 }

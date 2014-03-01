@@ -44,5 +44,13 @@ sellQuote.Ask - buyQuote.Bid
 
             smtpProvider.Send(subject, body);
         }
+
+
+
+
+        public void TradeSignal(Shared.Models.Trade trade)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
