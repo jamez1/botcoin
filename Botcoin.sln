@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin.Adapters.MtGox", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin.Shared", "Botcoin.Shared\Botcoin.Shared.csproj", "{AA9B5FF9-C340-4D6B-BE0A-B461BA6FCC57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin.Strategy.Arbitrarge1", "Botcoin.Strategy.Arbitrarge1\Botcoin.Strategy.Arbitrarge1.csproj", "{C2A75FD7-978A-4A89-87F3-8430DAC07C19}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin.Strategy.Arbitrarge", "Botcoin.Strategy.Arbitrarge1\Botcoin.Strategy.Arbitrarge.csproj", "{C2A75FD7-978A-4A89-87F3-8430DAC07C19}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botcoin.DataStore", "Botcoin.DataStore\Botcoin.DataStore.csproj", "{27774B90-80AD-4AF8-AC55-9278280F0DC3}"
 EndProject

@@ -39,15 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CurrencyPairRepository.cs" />
+    <Compile Include="Enums\CurrencyTypes.cs" />
     <Compile Include="Helpers\SMTPProvider.cs" />
     <Compile Include="Interfaces\IConfigurationManager.cs" />
+    <Compile Include="Interfaces\ICurrencyPairRepository.cs" />
     <Compile Include="Interfaces\IDataStore.cs" />
     <Compile Include="Interfaces\IExchange.cs" />
     <Compile Include="Interfaces\IFailSafeDetector.cs" />
     <Compile Include="Interfaces\INotificationEngine.cs" />
     <Compile Include="Interfaces\ISMTPProvider.cs" />
     <Compile Include="Interfaces\ITradeStrategy.cs" />
-    <Compile Include="Models\MarketOrderBuyBTCTransaction.cs" />
+    <Compile Include="Models\FixedFeeCurrencyWallet.cs" />
+    <Compile Include="Models\CurrencyWallet.cs" />
+    <Compile Include="Models\CurrencyWalletPair.cs" />
+    <Compile Include="Models\PercentageFeeCurrencyWallet.cs" />
     <Compile Include="Models\Trade.cs" />
     <Compile Include="Models\Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

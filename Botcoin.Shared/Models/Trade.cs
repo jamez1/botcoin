@@ -8,7 +8,7 @@ namespace Botcoin.Shared.Models
 {
     public class Trade
     {
-        readonly string tradeDescription
+        public readonly string tradeDescription;
 
         public Trade(string _tradeDescription)
         {

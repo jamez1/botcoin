@@ -8,6 +8,7 @@ using Botcoin.Shared.Models;
 
 namespace Botcoin.Strategy.Arbitrarge1
 {
+    [Obsolete]
     public class Arbitrarge1TradeStrategy: ITradeStrategy
     {
         readonly IExchange[] exchanges;
@@ -44,9 +45,13 @@ namespace Botcoin.Strategy.Arbitrarge1
             #region -- Execution --
 
             var trade = new Trade(desc);
-            trade.Transactions.Add(new MarketOrderBuyBTCTransaction(exchange1, qty, quote1.Bid));
 
-            notificationEngine.TradeSignal(quote1, quote2);
+            /*
+            trade.Transactions.Add(new MarketOrderBuyBTCTransaction(exchange1, qty, quote1.Bid));
+            trade.Transactions.Add(new MarketOrderSellBTCTransaction(exchange2, qty, quote1.Bid));
+            */
+            //notificationEngine.TradeSignal(quote1, quote2);
+            notificationEngine.TradeSignal(trade);
 
             #endregion
 

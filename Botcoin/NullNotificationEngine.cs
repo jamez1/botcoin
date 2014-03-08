@@ -16,5 +16,11 @@ namespace Botcoin
         {
             //DO nothing, used for debugging without spamming the recipients
         }
+
+
+        public void TradeSignal(Shared.Models.Trade trade)
+        {
+            //DO nothing, used for debugging without spamming the recipients
+        }
     }
 }

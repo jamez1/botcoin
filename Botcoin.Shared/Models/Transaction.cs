@@ -8,10 +8,21 @@ namespace Botcoin.Shared.Models
 {
     //May not be the best way to implement this, adds real time reporting of transactions
     //at the expense of overhead
-    public abstract class Transaction
+    public class Transaction
     {
-        public string toString();
-        public void Execute();
+        readonly CurrencyWalletPair pair;
+
+        public Transaction(CurrencyWalletPair _pair)
+        {
+            pair = _pair;
+        }
+
+        /*
+        public string ToString();
+        public void Execute();*/
+
+        decimal sourceAmount;
+        decimal destinationAmount;
 
     }
 }

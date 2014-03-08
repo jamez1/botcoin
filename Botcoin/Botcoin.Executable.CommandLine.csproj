@@ -89,9 +89,9 @@
       <Project>{aa9b5ff9-c340-4d6b-be0a-b461ba6fcc57}</Project>
       <Name>Botcoin.Shared</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Botcoin.Strategy.Arbitrarge1\Botcoin.Strategy.Arbitrarge1.csproj">
+    <ProjectReference Include="..\Botcoin.Strategy.Arbitrarge1\Botcoin.Strategy.Arbitrarge.csproj">
       <Project>{c2a75fd7-978a-4a89-87f3-8430dac07c19}</Project>
-      <Name>Botcoin.Strategy.Arbitrarge1</Name>
+      <Name>Botcoin.Strategy.Arbitrarge</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

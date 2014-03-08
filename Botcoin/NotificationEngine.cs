@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Botcoin.Shared;
 using Botcoin.Shared.Interfaces;
+using Botcoin.Shared.Models;
 
 namespace Botcoin
 {
@@ -48,9 +49,45 @@ sellQuote.Ask - buyQuote.Bid
 
 
 
-        public void TradeSignal(Shared.Models.Trade trade)
+        public void TradeSignal(Trade trade)
         {
-            throw new NotImplementedException();
+            string subject = string.Format("Botcoin - Trade signal");
+
+            string table = "";
+
+            foreach (var transaction in trade.Transactions)
+            {
+                table += string.Format(
+@"
+    <tr>
+        <td>
+            {0}
+        </td>
+        <td>
+        </td>
+    </tr>
+",
+ transaction.ToString()
+                    );
+            }
+
+            string body = string.Format(
+@"
+Botcoin trade signal: {0}</b>!<br>
+<br>
+
+<table>
+    <tr>
+    <th>Trade</th>
+    <th></th>
+    </tr>
+{1}
+</table>
+"
+, table
+);
+
+            smtpProvider.Send(subject, body);
         }
     }
 }

@@ -67,15 +67,17 @@ Automated BTC Trading platform
         static void Main(string[] args)
         {
             _container = new UnityContainer();
-            
+            /*
             _container.RegisterType<IExchange, MtGoxExchange>("MtGoxExchange", new ContainerControlledLifetimeManager(), new InjectionMember[]{});
             _container.RegisterType<IExchange, BitStampExchange>("BitStampExchange", new ContainerControlledLifetimeManager(), new InjectionMember[] { });
             _container.RegisterType<IExchange, BTCMarketsExchange>("BTCMarketsExchange", new ContainerControlledLifetimeManager(), new InjectionMember[] { });
-            _container.RegisterType<IExchange, BTCeExchange>("BTCeExchange", new ContainerControlledLifetimeManager(), new InjectionMember[] { });
             _container.RegisterType<IExchange, CampBXExchange>("CampBXExchange", new ContainerControlledLifetimeManager(), new InjectionMember[] { });
+             * */
+            _container.RegisterType<IExchange, BTCeExchange>("BTCeExchange", new ContainerControlledLifetimeManager(), new InjectionMember[] { });
+            
             _container.RegisterType<IDataStore, DBDataStore>( new ContainerControlledLifetimeManager());
 
-            _container.RegisterType<ITradeStrategy, Arbitrarge1TradeStrategy>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<ITradeStrategy, Arbitrarge2TradeStrategy>(new ContainerControlledLifetimeManager());
 
             _container.RegisterType<ISMTPProvider, SMTPProvider>(new ContainerControlledLifetimeManager());
 
@@ -83,6 +85,8 @@ Automated BTC Trading platform
             _container.RegisterType<INotificationEngine, NullNotificationEngine>(new ContainerControlledLifetimeManager());
 
             _container.RegisterType<IConfigurationManager, ConfigurationManager>(new ContainerControlledLifetimeManager());
+
+            _container.RegisterType<ICurrencyPairRepository, CurrencyPairRepository>(new ContainerControlledLifetimeManager());
 
             Intro();
             Run();
