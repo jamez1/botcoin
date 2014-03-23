@@ -70,10 +70,10 @@ Automated BTC Trading platform
             /*
             _container.RegisterType<IExchange, MtGoxExchange>("MtGoxExchange", new ContainerControlledLifetimeManager(), new InjectionMember[]{});
             _container.RegisterType<IExchange, BitStampExchange>("BitStampExchange", new ContainerControlledLifetimeManager(), new InjectionMember[] { });
-            _container.RegisterType<IExchange, BTCMarketsExchange>("BTCMarketsExchange", new ContainerControlledLifetimeManager(), new InjectionMember[] { });
             _container.RegisterType<IExchange, CampBXExchange>("CampBXExchange", new ContainerControlledLifetimeManager(), new InjectionMember[] { });
              * */
             _container.RegisterType<IExchange, BTCeExchange>("BTCeExchange", new ContainerControlledLifetimeManager(), new InjectionMember[] { });
+            _container.RegisterType<IExchange, BTCMarketsExchange>("BTCMarketsExchange", new ContainerControlledLifetimeManager(), new InjectionMember[] { });
             
             _container.RegisterType<IDataStore, DBDataStore>( new ContainerControlledLifetimeManager());
 

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Botcoin.Shared;
+using Botcoin.Shared.Enums;
 using Botcoin.Shared.Interfaces;
 using Botcoin.Shared.Models;
 using Newtonsoft.Json;
@@ -32,9 +33,9 @@ namespace Botcoin.Adapters.BTCe
             pairsToUpdate = new List<BTCeCurrencyWalletPair>();
 
             dataStore = _dataStore;
-            var btcWallet = new FixedFeeCurrencyWallet(0.001M,0.001M, this);
-            var ltcWallet = new FixedFeeCurrencyWallet(0.01M,0.01M, this);
-            var usdWallet = new PercentageFeeCurrencyWallet(0.01M,0.015M, this);
+            var btcWallet = new FixedFeeCurrencyWallet(0.001M,0.001M, CurrencyType.Bitcoin , this);
+            var ltcWallet = new FixedFeeCurrencyWallet(0.01M, 0.01M, CurrencyType.Litecoin, this);
+            var usdWallet = new PercentageFeeCurrencyWallet(0.01M, 0.015M, CurrencyType.USD, this);
 
             wallets.Add(btcWallet);
             wallets.Add(ltcWallet);
@@ -42,7 +43,7 @@ namespace Botcoin.Adapters.BTCe
 
             var btcusd = new BTCeCurrencyWalletPair(btcWallet, usdWallet,_dataStore, "https://btc-e.com/api/2/btc_usd/ticker");
             var ltcusd = new BTCeCurrencyWalletPair(ltcWallet, usdWallet,_dataStore, "https://btc-e.com/api/2/ltc_usd/ticker");
-            var btcltc = new BTCeCurrencyWalletPair(btcWallet, ltcWallet,_dataStore, "https://btc-e.com/api/2/ltc_btc/ticker");
+            var btcltc = new BTCeInverseQuoteCurrencyWalletPair(btcWallet, ltcWallet, _dataStore, "https://btc-e.com/api/2/ltc_btc/ticker");
 
             pairsToUpdate.Add(btcusd);
             pairsToUpdate.Add(ltcusd);

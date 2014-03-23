@@ -21,6 +21,22 @@ namespace Botcoin.Shared.Models
         public string ToString();
         public void Execute();*/
 
+        public void setInputAmount(decimal input)
+        {
+            sourceAmount = input;
+        }
+
+        public decimal getTransactionCost(decimal input)
+        {
+            return pair.GetTransactionCost(input);
+        }
+
+        public decimal getOutputAmount()
+        {
+            var transactionCosts = getTransactionCost(sourceAmount);
+            return sourceAmount - transactionCosts;
+        }
+
         decimal sourceAmount;
         decimal destinationAmount;
 

@@ -44,8 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BTCMarketsCurrencyWalletPair.cs" />
     <Compile Include="BTCMarketsExchange.cs" />
     <Compile Include="BTCMarketsTickerModel.cs" />
+    <Compile Include="BTCMarketsSyntheticCurrencyWalletPair.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

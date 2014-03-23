@@ -47,6 +47,7 @@
     <Compile Include="BTCeCurrencyWalletPair.cs" />
     <Compile Include="BTCeExchange.cs" />
     <Compile Include="BTCeExchangeTickerModel.cs" />
+    <Compile Include="BTCeInverseQuoteCurrencyWalletPair.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

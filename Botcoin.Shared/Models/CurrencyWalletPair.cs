@@ -10,9 +10,9 @@ namespace Botcoin.Shared.Models
     {
         public readonly CurrencyWallet sourceWallet;
         public readonly CurrencyWallet destinationWallet;
-        private readonly IDataStore dataStore;
+        protected readonly IDataStore dataStore;
 
-        private TickDataModel lastTick=null;
+        protected TickDataModel lastTick=null;
 
         public CurrencyWalletPair(CurrencyWallet _sourceWallet, CurrencyWallet _destinationWallet, IDataStore _dataStore)
         {
@@ -43,7 +43,7 @@ namespace Botcoin.Shared.Models
             return lastTick;
         }
 
-        public void Tick(TickDataModel tick)
+        public virtual void Tick(TickDataModel tick)
         {
             lastTick = tick;
             dataStore.Save(tick);//TODO: categorize the data by currencywalletpair

@@ -14,11 +14,13 @@ namespace Botcoin.Strategy.Arbitrarge1
     {
         readonly ICurrencyPairRepository currencyPairRepository;
         readonly INotificationEngine notificationEngine;
+        readonly IDataStore dataStore;
 
-        public Arbitrarge2TradeStrategy( INotificationEngine _notificationEngine, ICurrencyPairRepository _currencyPairRepository)
+        public Arbitrarge2TradeStrategy( INotificationEngine _notificationEngine, ICurrencyPairRepository _currencyPairRepository, IDataStore _dataStore)
         {
             currencyPairRepository = _currencyPairRepository;
             notificationEngine = _notificationEngine;
+            dataStore = _dataStore;
         }
 
         private bool Compare(CurrencyWalletPair exchange1, CurrencyWalletPair exchange2)
@@ -29,28 +31,29 @@ namespace Botcoin.Strategy.Arbitrarge1
             if (quote1 == null || quote2 == null)
                 return false;
 
-            if (quote1.Bid <= quote2.Ask)
-                return false;
-
-            #region -- Prepare --
-
             string desc = string.Format("Arb detected, buy {1} sell {0}", quote1.SourceExchange, quote2.SourceExchange);
-            Console.WriteLine(desc);
 
-            decimal qty = 1; //Determine this based on how much cash is left
-
-            #endregion 
-
-
+            CurrencyWalletPair ltcRebalance = new CurrencyWalletPair(exchange1.destinationWallet, exchange2.destinationWallet
+                , dataStore);
+            CurrencyWalletPair btcRebalance = new CurrencyWalletPair(exchange1.sourceWallet, exchange2.sourceWallet
+                , dataStore);
 
             #region -- Execution --
 
             var trade = new Trade(desc);
 
-            /*
-            trade.Transactions.Add(new MarketOrderBuyBTCTransaction(exchange1, qty, quote1.Bid));
-            trade.Transactions.Add(new MarketOrderSellBTCTransaction(exchange2, qty, quote1.Bid));
-            */
+
+            trade.Transactions.Add(new Transaction(exchange1));
+            trade.Transactions.Add(new Transaction(exchange2));
+            trade.Transactions.Add(new Transaction(ltcRebalance));
+            trade.Transactions.Add(new Transaction(btcRebalance));
+
+            var result = trade.Execute(1);
+
+            if (result <= 1)
+                return false; //Loses money
+
+
             //notificationEngine.TradeSignal(quote1, quote2);
             notificationEngine.TradeSignal(trade);
 
@@ -62,11 +65,12 @@ namespace Botcoin.Strategy.Arbitrarge1
         public void Execute()
         {
             //Clever loop to compare each exchange against eachother once
+            var pairs = currencyPairRepository.GetAll();
 
-            var pairs = currencyPairRepository.GetAll().Where(c => c.sourceWallet.Currency == CurrencyType.Bitcoin
+            var matchingPairs = pairs.Where(c => c.sourceWallet.Currency == CurrencyType.Bitcoin
                 && c.destinationWallet.Currency == CurrencyType.Litecoin).ToArray();
 
-            int exchangeCount = pairs.Count();
+            int exchangeCount = matchingPairs.Count();
 
             for (int i = 0; i < exchangeCount; i++)
             {
@@ -74,11 +78,11 @@ namespace Botcoin.Strategy.Arbitrarge1
                 {
 
                     //Try buy the first, sell the second
-                    var result = Compare(pairs[i], pairs[j]);
+                    var result = Compare(matchingPairs[i], matchingPairs[j]);
 
                     //If that didn't work try buy the second sell the first
                     if (!result)
-                        Compare(pairs[j], pairs[i]);
+                        Compare(matchingPairs[j], matchingPairs[i]);
                     
                 }
             }

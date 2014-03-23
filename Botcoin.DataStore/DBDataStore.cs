@@ -16,7 +16,7 @@ namespace Botcoin.DataStore
 
         public void Save(TickDataModel data)
         {
-            Console.WriteLine("Bid: {1}\t Ask: {0}\t Exchange: {2}",data.Ask,data.Bid, data.SourceExchange);
+            Console.WriteLine("Bid: {1}\t Ask: {0}\t Exchange: {2}", data.Ask.ToString("N2"), data.Bid.ToString("N2"), data.SourceExchange);
         }
     }
 }

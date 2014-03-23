@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Botcoin.Shared.Enums;
 
 namespace Botcoin.Shared.Models
 {
@@ -11,11 +12,13 @@ namespace Botcoin.Shared.Models
         decimal _entryPercentFee, _exitPercentFee;
         IExchange _exchange;
 
-        public PercentageFeeCurrencyWallet(decimal entryPercentFee, decimal exitPercentFee, IExchange exchange)
+        public PercentageFeeCurrencyWallet(decimal entryPercentFee, decimal exitPercentFee, CurrencyType currencyWallet, IExchange exchange)
         {
             _exchange = exchange;
             _entryPercentFee = entryPercentFee;
             _exitPercentFee = exitPercentFee;
+
+            Currency = currencyWallet;
         }
 
         public override decimal GetExitFee(decimal amount)
